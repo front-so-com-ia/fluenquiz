@@ -23,6 +23,15 @@ export default function Header() {
         >
           Trivia
         </NavLink>
+
+        <NavLink
+          className="
+          rounded-full px-4 py-2 transition-all
+          duration-200 hover:bg-white/20 active:scale-95"
+          to="/game2"
+        >
+          Game2
+        </NavLink>
       </nav>
     </header>
   );
