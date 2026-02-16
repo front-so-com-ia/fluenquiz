@@ -7,9 +7,23 @@ export default function MainRouter() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/trivia" element={<Trivia />} />
-        <Route path="/game2" element={<Game2 />} />
+        <Route
+          path="/play"
+          element={
+            <h1 className="text-center font-bold text-2xl mt-10">
+              PLAY SCREEN
+            </h1>
+          }
+        />
+        <Route
+          path="/results"
+          element={
+            <h1 className="text-center font-bold text-2xl mt-10">
+              RESULTS SCREEN
+            </h1>
+          }
+        />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
   );
