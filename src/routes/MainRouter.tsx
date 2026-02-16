@@ -1,12 +1,11 @@
-import { BrowserRouter, Route, Routes } from 'react-router';
-import Trivia from '../pages/Trivia';
-import Home from '../pages/Home';
-import Game2 from '../pages/Game2';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router';
+import { SetupScreen } from '../pages/SetupScreen';
 
 export default function MainRouter() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<SetupScreen />} />
         <Route
           path="/play"
           element={
