@@ -1,4 +1,4 @@
-# Projeto Trivia
+# Fluenquiz
 
 Este projeto é um jogo de trivia construído com uma stack de desenvolvimento web moderna.
 
@@ -10,6 +10,14 @@ O projeto utiliza as seguintes tecnologias:
 - **[Tailwind CSS](https://tailwindcss.com/)**: Um framework CSS utility-first para desenvolvimento rápido de UI.
 - **[TanStack Query](https://tanstack.com/query/latest)**: Uma biblioteca poderosa para data-fetching e gerenciamento de estado para React.
 - **[React Router](https://reactrouter.com/)**: A biblioteca padrão para roteamento em aplicações React.
+
+## Features futuras
+
+Essas são algumas das features que estão sendo planejadas para serem desenvolvidas futuramente:
+- [ ] Escolha de categoria das perguntas;
+- [ ] Escolha do nível de dificuldade;
+- [ ] Escolha de um avatar para o jogador na tela inicial;
+- [ ] Tabela de pontuação de rodadas anteriores.
 
 ## Instalação Local
 
