@@ -12,7 +12,13 @@ export function ResultsScreen() {
     return <Navigate to="/" replace />;
   }
 
-  const message = 'message placeholder';
+  const message = (score: number): string => {
+    if (score >= 0 && score <= 200) return "It’s past its prime... Take another stab at it";
+    if (score > 200 && score <= 500) return "Bang average.. Give it another shot";
+    if (score > 500 && score <= 700) return "Great effort! You're clearly improving.";
+    if (score > 700 && score <= 900) return "Incredible! You're among the top players.";
+    return "You nailed it!! Ya rule"
+  }
 
   const handlePlayAgain = () => {
     playAgain();
@@ -24,10 +30,13 @@ export function ResultsScreen() {
     navigate('/');
   };
 
+  const correctAnswers = score / 100
+  const hitRateAnswers = score / 10
+
   return (
     <BaseLayout className="animate-pop-in text-center glass-card space-y-6 p-8">
       <div>
-        <h2 className="text-3xl font-extrabold mb-1">{message}</h2>
+        <h2 className="text-3xl font-extrabold mb-1">{message(score)}</h2>
         <p className="text-white/50 font-medium text-lg">GG, {player.name}!</p>
       </div>
 
@@ -42,7 +51,7 @@ export function ResultsScreen() {
         </div>
         <div className="bg-white/5 rounded-xl p-4">
           <p className="text-3xl font-extrabold text-neon-green">
-            {0}
+            {correctAnswers}
             <span className="text-lg text-white/30">/{totalQuestions}</span>
           </p>
           <p className="text-xs text-white/40 uppercase tracking-wider font-semibold mt-1">
@@ -50,7 +59,7 @@ export function ResultsScreen() {
           </p>
         </div>
         <div className="bg-white/5 rounded-xl p-4">
-          <p className="text-3xl font-extrabold text-neon-purple">{0}%</p>
+          <p className="text-3xl font-extrabold text-neon-purple">{hitRateAnswers}%</p>
           <p className="text-xs text-white/40 uppercase tracking-wider font-semibold mt-1">
             Hit Rate
           </p>
